@@ -1,0 +1,52 @@
+<div class="header">
+  <div class="container">
+    <img src="http://www.hollywoodtheaterlax.com/picts/hollywood.jpg">
+    <h1>Talnta Talent Agency</h1>
+  </div>
+</div>
+
+<div class="messages">
+  <div class="container">
+
+    <!-- Your code here -->
+
+    <%= button_to "Log Out", 'logout', :class => "button", :method => :get  %>
+    <br>
+    <%= image_tag $loggedInTalent.image.url(:medium) %>
+
+    <p class="name">First Name  : <%= $loggedInTalent.first_name %></p>
+    <p class="last">Last Name  : <%= $loggedInTalent.last_name %></p>
+    <p class="content">About me : <%= $loggedInTalent.content %></p>
+    <p class="email">email    : <%= $loggedInTalent.email %></p>
+    <p class="phone">phone    : <%= $loggedInTalent.phone %></p>
+    <p class="age">date of birth: <%= $loggedInTalent.age %></p>
+    <p class="gender">gender   : <%= $loggedInTalent.gender %></p>
+    <p class="height">height   : <%= $loggedInTalent.height %></p>
+    <p class="nationality">nation    : <%= $loggedInTalent.nationality %></p>
+    <p class="demo">demo     : <%= $loggedInTalent.demo %></p>
+    <p class="resume">resume   : <%= $loggedInTalent.resume %></p>
+    <p class="time"><%= $loggedInTalent.created_at %></p>
+
+    <% @talents.each do |tl| %>
+
+<div class="message">
+
+    <%= image_tag tl.image.url(:medium) %>
+
+  <p class="name">First Name  : <%= tl.first_name %></p>
+  <p class="last">Last Name  : <%= tl.last_name %></p>
+  <p class="content">About me : <%= tl.content %></p>
+  <p class="email">email    : <%= tl.email %></p>
+  <p class="phone">phone    : <%= tl.phone %></p>
+  <p class="age">date of birth: <%= tl.age %></p>
+  <p class="gender">gender   : <%= tl.gender %></p>
+  <p class="height">height   : <%= tl.height %></p>
+  <p class="nationality">nation    : <%= tl.nationality %></p>
+  <p class="demo">demo     : <%= tl.demo %></p>
+  <p class="resume">resume   : <%= tl.resume %></p>
+  <p class="time"><%= tl.created_at %></p>
+</div>
+<% end %>
+
+  </div>
+</div>

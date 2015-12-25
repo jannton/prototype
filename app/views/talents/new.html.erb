@@ -1,0 +1,36 @@
+<div class="header">
+  <div class="container">
+    <img src="http://www.hollywoodtheaterlax.com/picts/hollywood.jpg">
+    <h1>Talnta New Talent</h1>
+  </div>
+</div>
+
+<div class="create">
+  <div class="container">
+
+    <!-- Your code here -->
+    <%= form_for @talent, url: talents_path, :html => { :multipart => true} do |t| %>
+  <div class="field">
+    <%= t.label :talent %><br>
+    Image   : <%= t.file_field :image %><br>
+    First Name:<%= t.text_area :first_name %><br>
+    Last Name :<%= t.text_area :last_name %><br>
+    email     :<%= t.email_field :email %><br>
+    password  :<%= t.password_field :password %><br>
+    About me  :<%= t.text_area :content %><br>
+    phone     :<%= t.telephone_field :phone %><br>
+    date of birth:<%= t.text_area :age %><br>
+    gender    :<%= t.text_area :gender %><br>
+    height    :<%= t.number_field :height %><br>
+    nation    :<%= t.text_area :nationality %><br>
+    demo      :<%= t.text_area :demo %><br>
+    resume    :<%= t.text_area :resume %><br>
+
+  </div>
+  <div class="actions">
+    <%= t.submit "Submit" %>
+  </div>
+<% end %>
+
+  </div>
+</div>
