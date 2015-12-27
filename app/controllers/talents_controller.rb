@@ -1,7 +1,7 @@
 class TalentsController < ApplicationController
-  $loggedInTalent
+before_action :require_talent, only: [:index, :show]
   def index
-    @talents = Talent.all
+      @talents = Talent.all
   end
 
   def new
@@ -11,6 +11,8 @@ class TalentsController < ApplicationController
   def create
     @talent = Talent.create(talent_params)
     if @talent.save
+      session[:user_id] = @talent.id
+      UserEmail.signup_notify(@talent).deliver
       redirect_to '/talents'
     else
       redirect_to '/signup'
