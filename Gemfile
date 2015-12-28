@@ -44,7 +44,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem "carrierwave"
 
 
-
-
   gem 'pg'
   gem 'rails_12factor'
