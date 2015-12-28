@@ -12,7 +12,7 @@ before_action :require_talent, only: [:index, :show]
     @talent = Talent.create(talent_params)
     if @talent.save
       session[:user_id] = @talent.id
-      UserEmail.signup_notify(@talent).deliver
+    #  UserEmail.signup_notify(@talent).deliver
       redirect_to '/talents'
     else
       redirect_to '/signup'

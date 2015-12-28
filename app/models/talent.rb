@@ -9,6 +9,7 @@ class Talent < ActiveRecord::Base
   validates_attachment_presence :image
   validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
   validates_uniqueness_of :email
+  has_many :links
    #validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
   #validates :image, :attachment_presence => true
   #validates_attachment :image, :presence => true, :content_type => { :content_type => "image/jpg" }

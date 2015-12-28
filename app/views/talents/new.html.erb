@@ -1,6 +1,6 @@
 <div class="header">
   <div class="container">
-    <img src="http://www.hollywoodtheaterlax.com/picts/hollywood.jpg">
+    <%= image_tag("talntalogo.jpg", :alt => "talntalogo feed") %>
     <h1>Talnta New Talent</h1>
   </div>
 </div>
@@ -11,20 +11,18 @@
     <!-- Your code here -->
     <%= form_for @talent, url: talents_path, :html => { :multipart => true} do |t| %>
   <div class="field">
-    <%= t.label :talent %><br>
-    Image   : <%= t.file_field :image %><br>
-    First Name:<%= t.text_area :first_name %><br>
-    Last Name :<%= t.text_area :last_name %><br>
-    email     :<%= t.email_field :email %><br>
-    password  :<%= t.password_field :password %><br>
-    About me  :<%= t.text_area :content %><br>
-    date of birth:<%= t.text_area :age %><br>
-    gender    :<%= t.text_area :gender %><br>
-    height    :<%= t.number_field :height %><br>
-    demo      :<%= t.text_area :demo %><br>
-    resume    :<%= t.text_area :resume %><br>
+    Profile Picture :<br><%= t.file_field :image %><br>
+    First Name      :<br><%= t.text_field :first_name %><br>
+    Last Name       :<br><%= t.text_field :last_name %><br>
+    Email           :<br><%= t.email_field :email %><br>
+    Password        :<br><%= t.password_field :password %><br>
+    About me        :<%= t.text_area :content %><br>
+    Date of birth   :<br><%= t.text_field :age %><br>
+    Gender          :<br><%= t.text_field :gender %><br>
+    Height          :<br><%= t.number_field :height %> cm <br>
 
   </div>
+  <br>
   <div class="actions">
     <%= t.submit "Submit" %>
   </div>

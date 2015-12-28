@@ -1,13 +1,13 @@
 <div class="header">
   <div class="container">
-    <img src="http://www.hollywoodtheaterlax.com/picts/hollywood.jpg">
+    <%= image_tag("talntalogo.jpg", :alt => "talntalogo feed") %>
     <h1>Talnta New Talent</h1>
   </div>
 </div>
 
 <div class="create">
   <div class="container">
-    
+
     <!-- Your code here -->
     <%= form_for(:session, url: login_path) do |f| %>
     <%= f.email_field :email, :placeholder => "Email" %>

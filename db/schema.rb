@@ -11,7 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151223233404) do
+ActiveRecord::Schema.define(version: 20151228042324) do
+
+  create_table "links", force: true do |t|
+    t.string  "other_profile"
+    t.integer "talent_id"
+  end
 
   create_table "talents", force: true do |t|
     t.string   "first_name"
