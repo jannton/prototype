@@ -12,11 +12,12 @@
     <%= form_for @talent, url: talents_path, :html => { :multipart => true} do |t| %>
   <div class="field">
     Profile Picture :<br><%= t.file_field :image %><br>
+    Username        :<br><%= t.text_field :username %><br>
     First Name      :<br><%= t.text_field :first_name %><br>
     Last Name       :<br><%= t.text_field :last_name %><br>
+    About me        :<%= t.text_area :content %><br>
     Email           :<br><%= t.email_field :email %><br>
     Password        :<br><%= t.password_field :password %><br>
-    About me        :<%= t.text_area :content %><br>
     Date of birth   :<br><%= t.text_field :age %><br>
     Gender          :<br><%= t.text_field :gender %><br>
     Height          :<br><%= t.number_field :height %> cm <br>

@@ -5,6 +5,7 @@ class CreateTalents < ActiveRecord::Migration
       t.string :image_content_type
       t.integer :image_file_size
       t.datetime :image_updated_at
+      t.string :username
       t.string :first_name
       t.string :last_name
       t.string :email

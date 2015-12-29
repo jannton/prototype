@@ -1,0 +1,30 @@
+<div class="header">
+  <div class="container">
+    <%= image_tag("talntalogo.jpg", :alt => "talntalogo feed") %>
+    <h1>Talnta Talent Agency</h1>
+  </div>
+</div>
+
+<div class="messages">
+  <div class="container">
+
+    <!-- Your code here -->
+
+    <%= button_to "Back", 'talents', :class => "button", :method => :get  %>
+    <br>
+<%= form_for(@talent) do |f| %>
+    Profile Picture :<br><%= f.file_field :image %><br>
+    Username        :<br><%= @talent.username %> <br>
+    First Name      :<br><%= f.text_field(:first_name, :value => @talent.first_name) %><br>
+    Last Name       :<br><%= f.text_field(:last_name, :value => @talent.last_name)  %><br>
+    About me        :<br><%= f.text_area(:content, :value => @talent.content) %><br>
+    Email           :<br><%= f.text_field(:email, :value => @talent.email) %><br>
+    Date of birth   :<br><%= f.text_field(:age, :value => @talent.age) %><br>
+    Gender          :<br><%= f.text_field(:gender, :value => @talent.gender) %><br>
+    Height          :<br><%= f.number_field(:height, :value => @talent.height) %> cm <br>
+    <br><br>
+      <%= f.submit "Update", :class => "btn" %>
+<% end %>
+
+  </div>
+</div>

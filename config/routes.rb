@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   resources :talents
   post 'talents' => 'talents#create'
 
+  get 'edit' => 'talents#edit' #, as: :edit_talent
+  patch 'talents' => 'talents#update'
+
   get 'login' => 'sessions#new'
    post 'login' => 'sessions#create'
 

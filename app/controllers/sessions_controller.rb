@@ -5,7 +5,7 @@
   end
 
   def create
-  @talent = Talent.find_by_email(params[:session][:email])
+  @talent = Talent.find_by_username(params[:session][:username])
   if @talent && @talent.authenticate(params[:session][:password])
     session[:user_id] = @talent.id
     redirect_to '/talents'

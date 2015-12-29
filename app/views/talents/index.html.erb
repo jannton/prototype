@@ -11,9 +11,13 @@
     <!-- Your code here -->
 
     <%= button_to "Log Out", 'logout', :class => "button", :method => :get  %>
+    <br> <br>
+    <%= button_to "Edit Profile", 'edit', :class => "button", :method => :get  %>
     <br>
 
+
     <%= image_tag current_talent.image.url(:medium) %>
+    <p class="username">Userame  : <%= current_talent.username %></p>
     <p class="name">First Name  : <%= current_talent.first_name %></p>
     <p class="last">Last Name  : <%= current_talent.last_name %></p>
     <p class="content">About me : <%= current_talent.content %></p>
@@ -37,6 +41,7 @@
   <p class="gender">gender   : <%= tl.gender %></p>
   <p class="height">height   : <%= tl.height %> cm </p>
   <p class="time"><%= tl.created_at %></p>
+
 </div>
 <% end %>
 
