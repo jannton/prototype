@@ -9,6 +9,7 @@ class CreateTalents < ActiveRecord::Migration
       t.string :first_name
       t.string :last_name
       t.string :email
+      t.integer :rating
       t.string :password_digest
       t.text :content
       t.text :phone

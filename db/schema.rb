@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151228042324) do
+ActiveRecord::Schema.define(version: 20160104092704) do
 
   create_table "links", force: true do |t|
     t.string  "other_profile"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20151228042324) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
+    t.integer  "rating"
     t.string   "password_digest"
     t.text     "content"
     t.text     "phone"
@@ -38,6 +39,7 @@ ActiveRecord::Schema.define(version: 20151228042324) do
     t.text     "resume"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "quote"
   end
 
 end

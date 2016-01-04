@@ -40,7 +40,7 @@ before_action :require_talent, only: [:index, :edit]
   end
 
   def edit_params
-   params.require(:talent).permit(:image, :first_name, :last_name, :content, :age, :gender, :height)
+   params.require(:talent).permit(:image, :quote, :first_name, :last_name, :content, :age, :gender, :height)
  end
 
 end
