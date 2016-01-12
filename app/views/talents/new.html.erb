@@ -11,16 +11,20 @@
     <!-- Your code here -->
     <%= form_for @talent, url: talents_path, :html => { :multipart => true} do |t| %>
   <div class="field">
+    Make sure fields are all filled and username is unique
+    <br><br>
     Profile Picture :<br><%= t.file_field :image %><br>
     Username        :<br><%= t.text_field :username %><br>
-    First Name      :<br><%= t.text_field :first_name %><br>
-    Last Name       :<br><%= t.text_field :last_name %><br>
-    About me        :<%= t.text_area :content %><br>
+    Full Name       :<br><%= t.text_field :first_name %><br>
     Email           :<br><%= t.email_field :email %><br>
     Password        :<br><%= t.password_field :password %><br>
-    Date of birth   :<br><%= t.text_field :age %><br>
+    Date of Birth   :<br><%= t.text_field :age %><br>
     Gender          :<br><%= t.text_field :gender %><br>
     Height          :<br><%= t.number_field :height %> cm <br>
+      About me        :
+      <br>This is a free space, be creative in how you present yourself,
+      add links to your Facebook, Instagram, Youtube, LinkedIn, etc.
+      <%= t.text_area :content %><br>
 
   </div>
   <br>

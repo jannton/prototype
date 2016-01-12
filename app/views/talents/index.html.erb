@@ -18,13 +18,12 @@
 
     <%= image_tag current_talent.image.url(:medium) %>
     <p class="username">Userame  : <%= current_talent.username %></p>
-    <p class="name">First Name  : <%= current_talent.first_name %></p>
-    <p class="last">Last Name  : <%= current_talent.last_name %></p>
+    <p class="name">Full Name  : <%= current_talent.first_name %></p>
+    <p class="email">Email    : <%= current_talent.email %></p>
+    <p class="age">Date of Birth: <%= current_talent.age %></p>
+    <p class="gender">Gender   : <%= current_talent.gender %></p>
+    <p class="height">Height   : <%= current_talent.height %> cm </p>
     <p class="content">About me : <%= current_talent.content %></p>
-    <p class="email">email    : <%= current_talent.email %></p>
-    <p class="age">date of birth: <%= current_talent.age %></p>
-    <p class="gender">gender   : <%= current_talent.gender %></p>
-    <p class="height">height   : <%= current_talent.height %> cm </p>
     <p class="time"><%= current_talent.created_at %></p>
 
     <% @talents.each do |tl| %>
@@ -33,15 +32,13 @@
 
     <%= image_tag tl.image.url(:medium) %>
 <p class="username">Username  : <%= tl.username %></p>
-  <p class="name">First Name  : <%= tl.first_name %></p>
-  <p class="last">Last Name  : <%= tl.last_name %></p>
-  <p class="q">Quote  : <%= tl.quote %></p>
+  <p class="name">Full Name  : <%= tl.first_name %></p>
+  <p class="age">Date of Birth: <%= tl.age %></p>
+  <p class="gender">Gender   : <%= tl.gender %></p>
+  <p class="height">Height   : <%= tl.height %> cm </p>
   <p class="content">About me : <%= tl.content %></p>
-  <p class="email">email    : <%= tl.email %></p>
-  <p class="age">date of birth: <%= tl.age %></p>
-  <p class="gender">gender   : <%= tl.gender %></p>
-  <p class="height">height   : <%= tl.height %> cm </p>
   <p class="time"><%= tl.created_at %></p>
+
 
 </div>
 <% end %>
