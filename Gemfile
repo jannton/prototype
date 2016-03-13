@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.5'
+ruby '2.2.2'
 
 gem "paperclip", "~> 4.3"
 
@@ -43,6 +43,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 gem "carrierwave"
 
+#heroku deploy
+  #gem 'pg'
+  #gem 'rails_12factor'
 
-  gem 'pg'
-  gem 'rails_12factor'
+  gem 'sqlite3'
